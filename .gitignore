@@ -1,0 +1,11 @@
+# Ignore Virtual Environment Directories
+venv/
+
+# Ingore __pycache__ Directory
+__pycache__/
+
+# Ignore Swap and Backups Files
+*.swp
+*~
+*.bak
+*.backup
