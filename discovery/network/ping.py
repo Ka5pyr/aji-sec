@@ -1,6 +1,14 @@
 import argparse
 import socket
+import sys
 import time
+
+def port_check(port):
+    if port.isdigit() and int(port) in range(1, 65536):
+        return True
+    else:
+        return False
+
 
 def parse_arguments():
     parser = argparse.ArgumentParser(description="Basic Ping scanner that allows for ICMP, TCP, and UDP.")
@@ -11,7 +19,7 @@ def parse_arguments():
     group.add_argument("-u", "--udp", help="UDP Scan", action="store_true")
 
     parser.add_argument("-a", "--address", help="IP Address", required=True)
-    parser.add_argument("-p", "--port", help="Port to use for TCP Ping")
+    parser.add_argument("-p", "--port", default=80, help="Port to use for TCP Ping")
 
     return parser.parse_args()
 
@@ -33,7 +41,6 @@ def icmp_ping(ip):
 
 
 def tcp_ping(ip, port):
-    resp=''
     try:
         start_time = time.time()
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -47,7 +54,7 @@ def tcp_ping(ip, port):
     
     finally:
         s.close()
-        return resp
+    return resp
 
 
 def udp_ping(ip):
@@ -58,12 +65,16 @@ def main():
     ip = args.address
     port = args.port
 
+    if not port_check(port):
+        print("Make sure to your port is a number between 1 & 65535")
+        sys.exit()
+
     if args.icmp:
         if icmp_ping(ip):
             print(f"{ip}")
         
     elif args.tcp:
-        if tcp_ping(ip, port):
+        if tcp_ping(ip, int(port)):
             print(f"{ip} responded on port {port}")
 
 
