@@ -31,7 +31,7 @@ def tcp_ping(ip, port):
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         s.settimeout(1)
 
-        s.connect((ip, port))
+        s.connect((ip, int(port)))
         s.shutdown(socket.SHUT_RDWR)
         resp = True
     except socket.error as e:
