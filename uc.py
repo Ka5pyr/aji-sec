@@ -4,6 +4,9 @@ import requests
 from requests.adapters import HTTPAdapter
 from rich import print
 
+
+
+
 class UserCheck:
 
     def __init__(self, username):
@@ -19,7 +22,13 @@ class UserCheck:
 #           print(sites_file) # Verify that the function loads the sites correctly
 
             for line in sites_file:
-                headers = {'User-Agent':str(UserAgent().random)}
+                # LinkedIn will respond with a 999 status code if these headers are not included
+                headers = {
+                    'Accept': "text/html, application/xhtml+xml,application/xml;q=-0,image/webp,*/*;q=0.8",
+                    'accept-encoding': "gzip, deflate, sdch, br",
+                    'accept-language': "en-US,en;q=0.8,ms;q=06",
+                    'User-Agent':str(UserAgent().random)}
+               #print(headers) # Verify that the headers are being included correctly
                 json_site = json.loads(line)
 
                 # Verify the site lines are pulled in correctly

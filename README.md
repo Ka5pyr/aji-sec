@@ -33,7 +33,9 @@ Use it at your own risk.
 - [ ] Add more sysarg support 
 - [ ] Create a menu for choosing different discovery techniques 
 - [ ] Add SQL backend to save data into
+- [ ] Create workspaces 
 - [ ] Rename Option_1 function name
+- [ ] Network Discovery
 
 ### In Progress
 - [ ] Add more sites to the Username search section

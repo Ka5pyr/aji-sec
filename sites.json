@@ -2,4 +2,5 @@
 {"site": "YouTube", "urls": ["youtube.com/user/","youtube.com/c/","youtube.com/@/"]}
 {"site": "Instagram", "urls": ["www.instagram.com/"]}
 {"site": "SnapChat", "urls": ["snapchat.com/add/"]}
+{"site": "LinkedIn", "urls": ["www.linkedin.com/in/"]}
 {"site": "GitHub", "urls": ["github.com/"]}
