@@ -2,7 +2,7 @@
 venv/
 
 # Ingore __pycache__ Directory
-__pycache__/
+*/__pycache__/
 
 # Ignore Swap and Backups Files
 *.swp
