@@ -1,5 +1,7 @@
-{"site": "TikTok", "urls": ["www.tiktok.com/@"]}
 {"site": "YouTube", "urls": ["youtube.com/user/","youtube.com/c/","youtube.com/@/"]}
+{"site": "Facebook", "urls": ["facebook.com/"]}
+{"site": "Reddit", "urls": ["www.reddit.com/u/", "www.reddit.com/r/"]}
+{"site": "TikTok", "urls": ["www.tiktok.com/@"]}
 {"site": "Instagram", "urls": ["www.instagram.com/"]}
 {"site": "SnapChat", "urls": ["snapchat.com/add/"]}
 {"site": "LinkedIn", "urls": ["www.linkedin.com/in/"]}
