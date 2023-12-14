@@ -13,7 +13,10 @@ cd aji-sec
 ### Set up a virtual environment (Optional):
 ```bash
 python3 -m venv venv
+# For FreeBSD/Linux/MacOS
 source venv/bin/activate
+# For Windows Powershell
+venv\Scripts\Activate
 ```
 ### Install the Dependencies
 ```bash
